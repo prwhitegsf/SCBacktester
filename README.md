@@ -31,7 +31,7 @@ Strategy performance can also be viewed on-chart via SCBacktester's subgraph out
 - If you're building locally:
   * include the Sierra Chart source directory: C:\SierraChart\ACS_Source
   * project requires C++20
-  * output DLL should be places in: C:\SierraChart\Data\
+  * output DLL should be placed in: C:\SierraChart\Data\
 
 
 ### Working with SCBacktester
