@@ -47,6 +47,7 @@ void Trade::initializeTradeMembers(SCStudyInterfaceRef sc, SCFloatArrayRef OpenC
 	if (use_close_for_entry_exit == 1) {
 		entry_price_ = static_cast<int>(sc.PriceValueToTicks(sc.Close[sc.Index-bars_since_open]));
 		exit_price_ = static_cast<int>(sc.PriceValueToTicks(sc.Close[sc.Index-1]));
+		
 	}
 	else {
 		entry_price_ = static_cast<int>(sc.PriceValueToTicks(entry_price));

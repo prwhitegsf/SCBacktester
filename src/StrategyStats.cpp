@@ -194,39 +194,39 @@ const std::string& StrategyStats::get_stats_table(
 	std::string stat_header;
 	std::string stat_data;
 
-	// split prepend cols, if any at line break, and place them at front
-	if(!prepend_cols.empty())
 
-	// stats
-	for (std::string_view cat : trade_categories_) {
 
-		std::string col_name{ cat };
+		// stats
+		for (std::string_view cat : trade_categories_) {
 
-		stat_header.append(col_name + "_entries" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].count_) + ",");
+			std::string col_name{ cat };
 
-		stat_header.append(col_name + "_pnl" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].pnl_) + ",");
+			stat_header.append(col_name + "_entries" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].count_) + ",");
 
-		stat_header.append(col_name + "_avg_pnl" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].avg_pnl) + ",");
+			stat_header.append(col_name + "_pnl" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].pnl_) + ",");
 
-		stat_header.append(col_name + "_win_percent" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].win_percent) + ",");
+			stat_header.append(col_name + "_avg_pnl" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].avg_pnl) + ",");
 
-		stat_header.append(col_name + "_avg_mae" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].avg_mae) + ",");
+			stat_header.append(col_name + "_win_percent" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].win_percent) + ",");
 
-		stat_header.append(col_name + "_avg_mfe" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].avg_mfe) + ",");
+			stat_header.append(col_name + "_avg_mae" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].avg_mae) + ",");
 
-		stat_header.append(col_name + "_avg_duration" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].avg_dur) + ",");
+			stat_header.append(col_name + "_avg_mfe" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].avg_mfe) + ",");
 
-		stat_header.append(col_name + "_profit_factor" + ",");
-		stat_data.append(std::to_string(strategy_results_[cat].profit_factor) + ",");
+			stat_header.append(col_name + "_avg_duration" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].avg_dur) + ",");
 
-	}
+			stat_header.append(col_name + "_profit_factor" + ",");
+			stat_data.append(std::to_string(strategy_results_[cat].profit_factor) + ",");
+
+		}
+	
 
 	std::string days_of_week[]{ "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday" };
 

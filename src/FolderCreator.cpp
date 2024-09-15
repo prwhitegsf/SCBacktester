@@ -23,6 +23,8 @@ FolderCreator::FolderCreator(SCStudyInterfaceRef sc, SCString strategy_name, SCS
 
 void FolderCreator::set_root_folder(std::string& custom_output_folder) {
 
+
+
 	// remove quotes from user input if they exist
 	if (custom_output_folder.starts_with("\""))
 		custom_output_folder.erase(0, 1);
